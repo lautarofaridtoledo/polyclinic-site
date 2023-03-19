@@ -1,10 +1,16 @@
 .banner {
-    height: 800px;
-    width: 1750px;
+    height: 60vh;
+    width: 90vw;
     background-image: url("./src/assets/images/banner.webp");
     background-repeat: no-repeat;
     background-size: cover;
     margin-right: auto;
     margin-left: auto;
     opacity: 40%;
+}
+
+@media screen and (min-width: 1400px) {
+    .banner {
+        height: 80vh;
+    }
 }
