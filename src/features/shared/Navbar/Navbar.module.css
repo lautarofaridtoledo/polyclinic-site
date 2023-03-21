@@ -1,27 +1,18 @@
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: auto;
-    min-height: 100px;
 }
 
-.navbar ol {
-    display: flex;
-    padding-right: 80px;
-}
-
-.navbar ol li {
-    margin-right: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.navbar ol li:hover {
-    color: #CCABD8;
+@media screen and (min-width: 768px) {
+    .navbar {
+        height: 120px;
+    }
 }
 
 .logo {
-    margin-left: 110px;
+    padding: 10px;
+}
+
+.navItem a {
+    min-width: 120px;
 }

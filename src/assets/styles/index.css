@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('./normalize.css');
 
-@import '../../../node_modules/tailwindcss/base.css';
-@import '../../../node_modules/tailwindcss/components.css';
-@import '../../../node_modules/tailwindcss/utilities.css';
-@import "normalize.css";
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+
 
 body {
     font-family: Lato, sans-serif;
     background: linear-gradient(180deg, rgba(141, 229, 216, 0.48) 0%, rgba(141, 229, 216, 0) 100%);
+    overflow: hidden scroll;
 }
