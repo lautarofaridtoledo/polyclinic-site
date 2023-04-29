@@ -1,11 +1,16 @@
 import React from 'react'
 import ImageSpeciality from "./ImageSpeciality";
 
-const CardSpeciality = ({name, imageUrl}) =>
+const CardSpeciality = ({name, imageUrl, description, onSelectSpeciality, toggleModal}) =>
 {
+    const handlerClick = () =>
+    {
+        onSelectSpeciality(name, description);
+        toggleModal();
+    };
 
-    return(
-        <div className='w-[120px] h-[120px] xl:w-[200px] xl:h-[200px]   m-5 bg-gray-200 relative'>
+    return (
+        <div className='w-[120px] h-[120px] xl:w-[200px] xl:h-[200px] xl:m-5 bg-gray-200 relative ds:m-2 md:m-5' onClick={handlerClick}>
             <div className='absolute inset-0 flex justify-center items-center hover:opacity-30'>
                 <ImageSpeciality url={imageUrl} name={name}/>
             </div>
@@ -17,6 +22,7 @@ const CardSpeciality = ({name, imageUrl}) =>
             </div>
         </div>
     )
-}
+};
+
 
 export default CardSpeciality;
