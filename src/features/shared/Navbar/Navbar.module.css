@@ -1,6 +1,18 @@
 
 .navbar {
     height: auto;
+    background-color: #CDF4EE;
+    transition: all 0.3s ease;
+}
+
+.boxShadow {
+    -webkit-box-shadow: -4px 3px 10px -7px rgba(0,0,0,0.8) !important;
+    -moz-box-shadow: -4px 3px 10px -7px rgba(0,0,0,0.8) !important;
+    box-shadow: -4px 3px 10px -7px rgba(0,0,0,0.9) !important;
+}
+
+.shadowNone {
+    box-shadow: none;
 }
 
 @media screen and (min-width: 768px) {
