@@ -5,8 +5,12 @@
 @tailwind base;
 @tailwind components;
 
+:root {
+    --main-bg-color: linear-gradient(180deg, rgba(141, 229, 216, 0.48) 0%, rgba(141, 229, 216, 0) 100%);
+}
+
 body {
     font-family: Lato, sans-serif;
-    background: linear-gradient(180deg, rgba(141, 229, 216, 0.48) 0%, rgba(141, 229, 216, 0) 100%);
+    background: var(--main-bg-color);
     overflow: hidden scroll;
 }

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import ListSpecialities from "../molecules/ListSpecialities";
 import banner from '../../../assets/images/global/specialities-banner.webp'
 import CustomModal from "../../shared/molecules/CustomModal";
@@ -6,7 +6,7 @@ import CustomModal from "../../shared/molecules/CustomModal";
 
 const Specialities = () =>
 {
-    const [modalSpeciality, setModalSpeciality] = useState({isOpen: false, speciality: '', description: ''});
+    const [modalSpeciality, setModalSpeciality] = useState({isOpen: false, speciality: '', description: '', url: ''});
 
     const toggleModal = () =>
     {
@@ -14,9 +14,9 @@ const Specialities = () =>
           return { ...prevState, isOpen: !prevState.isOpen }})
     };
 
-    const setSpeciality = (name, description) =>
+    const setSpeciality = (name, description, url) =>
     {
-        setModalSpeciality({...modalSpeciality, speciality: name, description: description})
+        setModalSpeciality({...modalSpeciality, speciality: name, description: description, url: url})
     };
 
     return(
@@ -36,6 +36,7 @@ const Specialities = () =>
                 isOpen={modalSpeciality.isOpen}
                 onClose={toggleModal}
                 onSave={()=>{}}
+                imageUrl={modalSpeciality.url}
             >
                 <div>
                     <p>{modalSpeciality.description}</p>
