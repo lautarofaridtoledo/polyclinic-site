@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './features/shared/Navbar/Navbar.jsx';
 import Banner from "./features/banner/template/Banner.jsx";
 import Specialities from "./features/specialities/templates/Specialities";
-import Institutional from "./features/institutional/Institutional";
+import Institutional from "./features/institutional/templates/Institutional";
 
 const App = () =>
 {

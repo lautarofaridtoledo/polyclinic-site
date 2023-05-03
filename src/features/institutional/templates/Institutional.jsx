@@ -1,5 +1,7 @@
 import React from "react";
-import banner from "../../assets/images/global/institutional.webp";
+import banner from "../../../assets/images/global/institutional.webp";
+import InstitutionalPrinciples from "../molecules/InstitutionalPrinciples";
+import institutional from '../../../json/institutional.json';
 
 const Institutional = () =>
 {
@@ -11,6 +13,9 @@ const Institutional = () =>
             </div>
             <div>
                 <img src={banner} alt='specialities banner' className='w-full mx-auto' />
+            </div>
+            <div className='my-5 w-[90vw] mx-auto'>
+                <InstitutionalPrinciples institutional={institutional}/>
             </div>
         </section>
     )

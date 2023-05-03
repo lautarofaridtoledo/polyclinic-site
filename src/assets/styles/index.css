@@ -10,3 +10,21 @@ body {
     background: linear-gradient(180deg, rgba(141, 229, 216, 0.48) 0%, rgba(141, 229, 216, 0) 100%);
     overflow: hidden scroll;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: #9d9d9d;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, rgba(141, 229, 216, 0.48) 0%, rgba(141, 229, 216, 0) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bbbbbb;
+    border: 1px solid #646464;
+    border-radius: 4px;
+}
