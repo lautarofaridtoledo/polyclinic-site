@@ -6,6 +6,7 @@ import Navbar from './features/shared/Navbar/Navbar.jsx';
 import Banner from "./features/banner/template/Banner.jsx";
 import Specialities from "./features/specialities/templates/Specialities";
 import Institutional from "./features/institutional/templates/Institutional";
+import Contact from "./features/contact/templates/Contact";
 
 const App = () =>
 {
@@ -15,6 +16,7 @@ const App = () =>
                 <Banner />
                 <Specialities />
                 <Institutional />
+                <Contact />
             </div>
     );
 }

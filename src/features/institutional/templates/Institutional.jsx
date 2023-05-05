@@ -4,8 +4,7 @@ import InstitutionalPrinciples from "../molecules/InstitutionalPrinciples";
 import institutional from '../../../json/institutional.json';
 
 const Institutional = () =>
-{
-    return(
+    (
         <section className='mx-auto'>
             <div className='my-5 w-[90vw] mx-auto'>
                 <h3 className='text-2xl'>Institucional</h3>
@@ -19,6 +18,5 @@ const Institutional = () =>
             </div>
         </section>
     )
-}
 
 export default Institutional;

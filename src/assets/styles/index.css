@@ -16,7 +16,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, rgba(141, 229, 216, 0.48) 0%, rgba(141, 229, 216, 0) 100%);
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
