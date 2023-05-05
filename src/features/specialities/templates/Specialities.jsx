@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ListSpecialities from "../molecules/ListSpecialities";
 import banner from '../../../assets/images/global/specialities-banner.webp'
 import CustomModal from "../../shared/molecules/CustomModal";
-
+import specialities from '../../../json/specialities.json'
 
 const Specialities = () =>
 {
@@ -29,7 +29,7 @@ const Specialities = () =>
                 <img src={banner} alt='specialities banner' className='w-full mx-auto' />
             </div>
             <div className='flex ds:flex-col xl:flex-row md:flex-row items-center md:justify-center xl:justify-center flex-wrap xl:w-[70vw] xl:h-[30vw] mx-auto my-5 xl:py-5 ds:h-[40vh] md:h-[30vw]'>
-                <ListSpecialities onSelectSpeciality={setSpeciality} toggleModal={toggleModal} />
+                <ListSpecialities specialities={specialities} onSelectSpeciality={setSpeciality} toggleModal={toggleModal} />
             </div>
             <CustomModal
                 title={modalSpeciality.speciality}

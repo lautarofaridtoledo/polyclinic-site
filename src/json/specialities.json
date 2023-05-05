@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Psicología",
+    "image": "/specialities/psycho.svg",
+    "description": "En nuestro consultorio de psicología, brindamos un ambiente acogedor y confidencial para que puedas explorar tus pensamientos y emociones en un entorno seguro y apoyado.\nCon un enfoque en la atención individualizada, trabajamos contigo para desarrollar estrategias que se ajusten a tus necesidades únicas.\n\n¡Agenda tu cita hoy y déjanos ayudarte a alcanzar el bienestar emocional que mereces!"
+  },
+  {
+    "name": "Fonoaudiología",
+    "image": "/specialities/phonoAudiology.svg",
+    "description": "Ofrecemos evaluaciones detalladas y terapias individualizadas para tratar una amplia variedad de problemas de habla y voz. \nDesde la disfonía hasta los trastornos del habla en niños, trabajamos contigo para mejorar tu calidad de vida y permitirte hablar y comunicarte con confianza. \n\n¡Agenda tu cita hoy y permítenos ayudarte a recuperar tu voz!"
+  },
+  {
+    "name": "Neurología",
+    "image": "/specialities/neurology.svg",
+    "description": "En nuestro consultorio de neurología, ofrecemos evaluaciones detalladas y tratamientos personalizados para una amplia gama de condiciones, desde dolores de cabeza hasta trastornos neurológicos complejos. Con un enfoque en la atención individualizada y la investigación de última generación. \n\n¡Agenda tu cita hoy y permítenos ayudarte a alcanzar el bienestar cerebral que mereces!"
+  },
+  {
+    "name": "Terapia ocupacional",
+    "image": "/specialities/therapist.svg",
+    "description": "En nuestro consultorio de terapia ocupacional, trabajamos contigo para desarrollar estrategias personalizadas para superar obstáculos y mejorar tu capacidad para participar en las actividades importantes para ti. \nDesde lesiones hasta las condiciones médicas crónicas. \n\n¡Agenda tu cita hoy y permítenos ayudarte a vivir una vida más plena y activa!"
+  }
+]
