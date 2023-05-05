@@ -31,7 +31,7 @@ const Navbar = () =>
                             <img src={logo} alt={'logo'} className='w-[80%]'/>
                         </div>
                         <button
-                            className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden  xl:hidden outline-none focus:outline-none"
+                            className="text-black cursor-pointer text-xl leading-none px-3 py-1  border-0 rounded bg-transparent block lg:hidden  xl:hidden outline-none focus:outline-none"
                             type="button"
                             onClick={() => setNavbarOpen(!navbarOpen)}
                         >

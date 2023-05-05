@@ -26,5 +26,7 @@
 }
 
 .navItem a {
-    min-width: 120px;
+    width: auto;
+    max-width: 130px;
+    text-decoration: none;
 }
