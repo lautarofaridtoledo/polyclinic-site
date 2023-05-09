@@ -7,6 +7,7 @@ import Banner from "./features/banner/template/Banner.jsx";
 import Specialities from "./features/specialities/templates/Specialities";
 import Institutional from "./features/institutional/templates/Institutional";
 import Contact from "./features/contact/templates/Contact";
+import Footer from "./features/shared/Footer/Footer";
 
 const App = () =>
 {
@@ -17,6 +18,7 @@ const App = () =>
                 <Specialities />
                 <Institutional />
                 <Contact />
+                <Footer />
             </div>
     );
 }

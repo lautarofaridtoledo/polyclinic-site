@@ -11,15 +11,12 @@ const ContactForm = () =>
             <CCol lg={6} md={6}>
                 <CFormInput type="email" id="inputEmail4" label="Email" placeholder={'Tu email...'}/>
             </CCol>
-            <CCol lg={6} md={8}>
-                <CFormInput type="number" id="inputPhone" label="Telefono" placeholder={'Tu numero...'}/>
-            </CCol>
             <CCol lg={12} md={12}>
                 <CFormTextarea label="Mensaje" id="inputMessage" placeholder="Escribe tu mensaje aquí" style={{resize: "none"}}/>
             </CCol>
 
             <CCol xs={12}>
-                <CButton type="submit">Enviar</CButton>
+                <CButton className={'mt-2'} type="submit">Enviar</CButton>
             </CCol>
         </CForm>
     )

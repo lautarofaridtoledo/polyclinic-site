@@ -1,19 +1,18 @@
 import React from "react";
 import ContactForm from "../organisms/ContactForm";
+import styles from './Contact.module.css'
+import SectionTitle from "../../shared/atoms/SectionTitle";
 
 const Contact = () =>
 {
     return(
         <section className={'mx-auto my-4'}>
-            <div className='my-5 w-[90vw] mx-auto'>
-                <h3 className='text-2xl'>Contacto</h3>
-                <div className='border-b-[#CACACA] border-b-[3px] rounded w-[90vw] mx-auto' ></div>
-            </div>
-            <div className={'flex flex-row w-[90vw] mx-auto gap-2'}>
-                <div className={'w-1/2 h'}>
-                    <p>Send your information and I will contact you soon</p>
-                </div>
-                <div className={'w-1/2 bg-gray-200 p-5 rounded-xl shadow-md'}>
+            <SectionTitle name={'Contacto'}/>
+            <div className={'mb-5'}>
+                <div className={`max-w-2xl mx-auto  p-5 rounded-xl shadow-md ${styles.formContainer}`}>
+                    <div className={'pb-3'}>
+                        <p>Completa con tu información y nosotros nos pondremos en contacto.</p>
+                    </div>
                     <ContactForm />
                 </div>
             </div>
