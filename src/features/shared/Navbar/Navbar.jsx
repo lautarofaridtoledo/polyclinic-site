@@ -4,6 +4,7 @@ import logo from '../../../assets/images/global/Logo.svg';
 import LinksNavbar from "./atoms/LinksNavbar.jsx";
 import burgerIcon from '../../../assets/images/global/burgerIcon.svg';
 import crossIcon from '../../../assets/images/global/cross.svg';
+import smoothScroll from "../../../utils/smoothScroll";
 
 const Navbar = () =>
 {

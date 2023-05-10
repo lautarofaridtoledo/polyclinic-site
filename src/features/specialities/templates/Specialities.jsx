@@ -21,7 +21,7 @@ const Specialities = () =>
     };
 
     return(
-        <section className='mx-auto bg-[#34495E] p-1'>
+        <section id={'especialidades'} className='mx-auto bg-[#34495E] p-1'>
             <SectionTitle name={'Especialidades'} />
             <div>
                 <img src={banner} alt='specialities banner' className='mx-auto h-[20vh] w-[90vw]' />

@@ -6,7 +6,7 @@ import SectionTitle from "../../shared/atoms/SectionTitle";
 
 const Institutional = () =>
     (
-        <section className='mx-auto'>
+        <section id={'institucional'} className='mx-auto pt-3'>
             <SectionTitle name={'Institucional'} />
             <div>
                 <img src={banner} alt='specialities banner' className='mx-auto h-[20vh] w-[90vw]' />
