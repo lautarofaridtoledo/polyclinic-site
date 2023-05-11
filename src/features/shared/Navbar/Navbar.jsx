@@ -8,7 +8,7 @@ import smoothScroll from "../../../utils/smoothScroll";
 
 const Navbar = () =>
 {
-    const links = ['Institucional', 'Especialidades', 'Contacto', 'Sacar turno'];
+    const links = ['Especialidades', 'Institucional', 'Contacto'];
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [ navShadow, setNavShadow ] = useState(false);
 
@@ -28,7 +28,7 @@ const Navbar = () =>
             <nav className={`relative ${styles.navbar} flex flex-wrap items-center justify-between px-[50px] py-2 mb-2 md:px-0 sm:px-2 ${navShadow ? styles.boxShadow : styles.shadowNone}`}>
                 <div className="container px-0 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between md:px-5 lg:w-auto xl:w-auto lg:static xl:static lg:block xl:block lg:justify-start xl:justify-start">
-                        <div className={styles.logo}>
+                        <div className={styles.logo} onClick={() => smoothScroll('banner')}>
                             <img src={logo} alt={'logo'} className='w-[80%]'/>
                         </div>
                         <button

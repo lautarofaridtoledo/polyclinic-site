@@ -8,6 +8,7 @@ import Specialities from "./features/specialities/templates/Specialities";
 import Institutional from "./features/institutional/templates/Institutional";
 import Contact from "./features/contact/templates/Contact";
 import Footer from "./features/shared/Footer/Footer";
+import BackToTop from "./features/shared/molecules/backToTop/BackToTop";
 
 const App = () =>
 {
@@ -18,6 +19,7 @@ const App = () =>
                 <Specialities />
                 <Institutional />
                 <Contact />
+                <BackToTop />
                 <Footer />
             </div>
     );

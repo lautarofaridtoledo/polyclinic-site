@@ -1,6 +1,6 @@
 import React from "react";
 import {CButton, CModal, CModalBody, CModalFooter, CModalHeader, CModalTitle} from "@coreui/react";
-import ImageSpeciality from "../../specialities/atoms/ImageSpeciality";
+import ImageSpeciality from "../../../specialities/atoms/ImageSpeciality";
 import styles from './customModal.module.css';
 
 const CustomModal = (props) =>

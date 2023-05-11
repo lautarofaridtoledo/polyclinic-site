@@ -18,7 +18,7 @@ const InstitutionalPrinciple  = ({title, description}) =>
     return(
         <div className={'my-5'}>
             <h3 className={`font-extrabold text-3xl ${styles.title} my-4`}>{title}</h3>
-            <div className={'ml-5'} id={`description-${title}`}></div>
+            <div className={`ml-5 ${styles.description}`} id={`description-${title}`}></div>
         </div>
     )
 };
