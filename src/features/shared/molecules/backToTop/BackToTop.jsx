@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {CButton, CTooltip} from "@coreui/react";
-import smoothScroll from "../../../../utils/smoothScroll";
+import {CButton} from "@coreui/react";
 import arrow from '../../../../assets/images/global/top-arrow.webp';
 import styles from './BackToTop.module.css';
 
@@ -16,16 +15,16 @@ const BackToTop = () =>
         )
     }, [])
 
+    const scrollTop = () =>
+    {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    }
+
     return(
         <div className={`flex absolute right-5 ${ offsetTop > 200 ? styles.btnBack : 'hidden' }`}>
-            <CTooltip
-                content="Volver arriba"
-                placement="left"
-            >
-                <CButton color='light' onClick={()=> smoothScroll('banner')}>
-                    <img src={arrow} alt={'arrow top'} className={'w-[40px]'} />
-                </CButton>
-            </CTooltip>
+            <CButton color='light' onClick={scrollTop}>
+                <img src={arrow} alt={'arrow top'} className={'w-[40px]'} title={"Volver arriba"} />
+            </CButton>
         </div>
     )
 }

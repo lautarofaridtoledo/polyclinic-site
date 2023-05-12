@@ -26,7 +26,7 @@ const Specialities = () =>
             <div>
                 <img src={banner} alt='specialities banner' className='mx-auto h-[20vh] w-[90vw]' />
             </div>
-            <div className='flex ds:flex-col xl:flex-row md:flex-row items-center md:justify-center xl:justify-center flex-wrap xl:w-[70vw] xl:h-[20vw] mx-auto my-5 xl:py-5 ds:h-[40vh] md:h-[30vw]'>
+            <div className='flex ds:flex-col xl:flex-row md:flex-row items-center md:justify-center xl:justify-center flex-wrap xl:w-[70vw] xl:h-[20vw] mx-auto my-5 xl:py-5 ds:h-[60vh] md:h-[30vw]'>
                 <ListSpecialities specialities={specialities} onSelectSpeciality={setSpeciality} toggleModal={toggleModal} />
             </div>
             <CustomModal

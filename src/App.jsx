@@ -13,7 +13,7 @@ import BackToTop from "./features/shared/molecules/backToTop/BackToTop";
 const App = () =>
 {
     return (
-            <div className="min-h-screen">
+            <div className="min-h-screen min-w-full">
                 <Navbar />
                 <Banner />
                 <Specialities />

@@ -11,9 +11,6 @@ const Footer = () =>
                     <img src={logo} alt={'logo'}/>
                 </div>
                 <div className={'pt-3 items-center'}>
-                    <p>{new Date().getFullYear()} ® Todos los derechos reservados. </p>
-                </div>
-                <div className={'pt-3 items-center'}>
                     <div className={'flex flex-row justify-between gap-4 text-xs'}>
                         <div>
                             <p>Privacy Policy</p>
@@ -24,6 +21,12 @@ const Footer = () =>
                     </div>
                 </div>
             </div>
+
+            <div className={'items-center text-center'}>
+                <hr/>
+                <p className={'ds:text-sm'}>{new Date().getFullYear()} ® Todos los derechos reservados. </p>
+            </div>
+
 
         </footer>
     )

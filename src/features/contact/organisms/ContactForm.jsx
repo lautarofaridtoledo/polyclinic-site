@@ -3,14 +3,12 @@ import {CButton, CCol, CForm, CFormInput, CFormTextarea} from "@coreui/react";
 
 const ContactForm = ({onChange, onSubmit}) =>
     (
-
         <CForm
             className="row g-3 need-validation"
             noValidate
-            // validated={validated}
             onSubmit={onSubmit}
         >
-            <CCol lg={6} md={6}>
+            <CCol xs={12} lg={6} md={6}>
                 <CFormInput
                     type="text"
                     className="form-control"
@@ -22,7 +20,7 @@ const ContactForm = ({onChange, onSubmit}) =>
                     onChange={(e) => onChange(e)}
                 />
             </CCol>
-            <CCol lg={6} md={6}>
+            <CCol xs={12} lg={6} md={6}>
                 <CFormInput
                     type="email"
                     id="validationCustom01"
@@ -35,12 +33,12 @@ const ContactForm = ({onChange, onSubmit}) =>
                     onChange={(e) => onChange(e)}
                 />
             </CCol>
-            <CCol lg={12} md={12}>
+            <CCol xs={12} lg={12} md={12}>
                 <CFormTextarea
                     label="Mensaje"
                     name='message'
                     id="inputMessage"
-                    placeholder="Escribe tu mensaje aquí"
+                    placeholder="Escribe tu mensaje aquí..."
                     style={{resize: "none"}}
                     onChange={(e) => onChange(e)}
                 />
