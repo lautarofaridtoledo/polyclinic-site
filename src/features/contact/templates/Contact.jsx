@@ -34,7 +34,7 @@ const Contact = () =>
 
         setTimeout(() =>
             setSubmitted(false)
-            , 1500)
+            , 3000)
     };
 
     const handleChangeLeadData = (e) =>
