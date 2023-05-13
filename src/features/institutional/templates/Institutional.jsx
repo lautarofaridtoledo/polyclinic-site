@@ -1,8 +1,8 @@
-import React from "react";
-import banner from "../../../assets/images/global/institutional.webp";
-import InstitutionalPrinciples from "../molecules/InstitutionalPrinciples";
+import React from 'react';
+import banner from '../../../../public/assets/images/global/institutional.webp';
+import InstitutionalPrinciples from '../molecules/InstitutionalPrinciples';
 import institutional from '../../../json/institutional.json';
-import SectionTitle from "../../shared/atoms/SectionTitle";
+import SectionTitle from '../../shared/atoms/SectionTitle';
 
 const Institutional = () =>
     (

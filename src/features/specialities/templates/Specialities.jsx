@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import ListSpecialities from "../molecules/ListSpecialities";
-import banner from '../../../assets/images/global/specialities-banner.webp'
-import CustomModal from "../../shared/molecules/customModal/CustomModal";
+import ListSpecialities from '../molecules/ListSpecialities';
+import banner from '../../../../public/assets/images/global/specialities-banner.webp';
+import CustomModal from '../../shared/molecules/customModal/CustomModal';
 import specialities from '../../../json/specialities.json'
-import SectionTitle from "../../shared/atoms/SectionTitle";
+import SectionTitle from '../../shared/atoms/SectionTitle';
 
 const Specialities = () =>
 {

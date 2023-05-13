@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import styles from './Banner.module.css';
-import {CButton} from "@coreui/react";
-import smoothScroll from "../../../utils/smoothScroll";
+import {CButton} from '@coreui/react';
+import smoothScroll from '../../../utils/smoothScroll';
 
 const Banner = () =>
     (
