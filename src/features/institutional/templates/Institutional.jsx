@@ -8,7 +8,7 @@ const Institutional = () =>
     (
         <section id={'institucional'} className='mx-auto pt-3'>
             <SectionTitle name={'Institucional'} img={banner}/>
-            <div className='my-5 w-[90vw] mx-auto'>
+            <div className='w-[90vw] mx-auto'>
                 <InstitutionalPrinciples institutional={institutional}/>
             </div>
         </section>

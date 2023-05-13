@@ -47,9 +47,9 @@ const Contact = () =>
 
 
     return(
-        <section id={'contacto'} className={'mx-auto mt-5 mb-3'}>
+        <section id={'contacto'} className={'mx-auto mb-3'}>
             <SectionTitle name={'Contacto'}/>
-            <div className={'mb-5 pt-5 w-[90%] mx-auto'}>
+            <div className={'mb-5 pt-3 w-[90%] mx-auto'}>
                 <div className={`max-w-2xl mx-auto px-4 py-5 rounded-xl shadow-md ${styles.formContainer}`}>
                     {
                         loading &&

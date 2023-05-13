@@ -10,7 +10,7 @@ const SectionTitle = ({name, img = null}) =>
             {
                 img &&
                 <div>
-                    <img src={img} alt='section banner' className='mx-auto h-[20vh] w-[90vw] ds:h-[12vh]' />
+                    <img src={img} alt='section banner' className='mx-auto h-[25%] w-[90vw]' />
                 </div>
             }
         </>
