@@ -3,10 +3,9 @@ import logo from '../../../assets/images/global/Logo.svg';
 import styles from './Footer.module.css';
 
 const Footer = () =>
-{
-    return(
+    (
         <footer className={`w-full ${styles.footer}`}>
-            <div className={'container py-3 pb-0 flex flex-row justify-between items-center'}>
+            <div className={'container py-3 pb-0 flex flex-row justify-between items-center px-4'}>
                 <div>
                     <img src={logo} alt={'logo'}/>
                 </div>
@@ -26,11 +25,7 @@ const Footer = () =>
                 <hr/>
                 <p className={'ds:text-sm'}>{new Date().getFullYear()} ® Todos los derechos reservados. </p>
             </div>
-
-
         </footer>
     )
-
-}
 
 export default Footer;

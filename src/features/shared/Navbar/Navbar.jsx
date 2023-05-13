@@ -50,6 +50,7 @@ const Navbar = () =>
                                         <LinksNavbar
                                             key={idx}
                                             title={title}
+                                            onSelectSection={() => setNavbarOpen(!navbarOpen)}
                                         />
                                     ))
                             }

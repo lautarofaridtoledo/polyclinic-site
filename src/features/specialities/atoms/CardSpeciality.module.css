@@ -6,3 +6,9 @@
 .cardSpeciality {
     background-color: var(--bg-cards-color);
 }
+
+@media screen and (min-width: 480px) and (max-width: 759px){
+    .cardSpeciality {
+        @apply m-2;
+    }
+}
