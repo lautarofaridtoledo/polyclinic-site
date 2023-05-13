@@ -15,7 +15,7 @@ const CustomModal = (props) =>
             <CModalHeader>
                 <CModalTitle>
                     <p className='flex gap-3 items-center mb-0'>
-                        <span className=' flex w-[40px]'>
+                        <span className={`flex w-[40px] ${styles.imgModal}`}>
                             <ImageSpeciality url={props.imageUrl} name={props.title}/>
                         </span>
                         {props?.title}

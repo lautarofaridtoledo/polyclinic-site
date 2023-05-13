@@ -5,3 +5,7 @@
 .btn-confirm button {
     background-color: linear-gradient(180deg, #CCABD8 0%, rgba(204, 171, 216, 0) 100%, #CCABD8 100%) !important;
 }
+
+.imgModal {
+    @apply w-3/4;
+}
