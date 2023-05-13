@@ -12,7 +12,7 @@ const CardSpeciality = ({name, imageUrl, description, onSelectSpeciality, toggle
 
     return (
         <>
-            <div className={`w-[120px] h-[120px] xl:w-[200px] xl:h-[200px] xl:m-5 rounded-md relative ds:m-2 md:m-5 shadow-md ${styles.cardSpeciality}`} onClick={handlerClick}>
+            <div className={`w-[120px] h-[120px] xl:w-[200px] xl:h-[200px] xl:m-5 rounded-md relative m-2 md:m-5 xl:m-5 shadow-md ${styles.cardSpeciality}`} onClick={handlerClick}>
                 <div className='absolute inset-0 flex justify-center items-center'>
                     <ImageSpeciality url={imageUrl} name={name} />
                     <div className={`absolute inset-0 z-100 items-center opacity-0 h-full ${styles.textSpeciality}`}>
