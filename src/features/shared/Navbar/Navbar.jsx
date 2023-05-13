@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Navbar.module.css';
-import logo from '../../../../public/assets/images/global/Logo.svg';
+import logo from '../../../assets/images/global/Logo.svg';
 import LinksNavbar from './atoms/LinksNavbar.jsx';
-import burgerIcon from '../../../../public/assets/images/global/burgerIcon.svg';
-import crossIcon from '../../../../public/assets/images/global/cross.svg';
+import burgerIcon from '../../../assets/images/global/burgerIcon.svg';
+import crossIcon from '../../../assets/images/global/cross.svg';
 import smoothScroll from '../../../utils/smoothScroll';
 
 const Navbar = () =>

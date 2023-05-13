@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
-import ContactForm from "../organisms/ContactForm";
+import React from 'react';
+import ContactForm from '../organisms/ContactForm';
 import styles from './Contact.module.css'
-import SectionTitle from "../../shared/atoms/SectionTitle";
-import {useState} from "react";
-import {CSpinner} from "@coreui/react";
-import SendSuccessfully from "../atoms/SendSuccessfully";
+import SectionTitle from '../../shared/atoms/SectionTitle';
+import {useState} from 'react';
+import {CSpinner} from '@coreui/react';
+import SendSuccessfully from '../atoms/SendSuccessfully';
 
 const initialValues = {
     name: '',
@@ -54,7 +54,7 @@ const Contact = () =>
                     {
                         loading &&
                             <div className={'flex items-center justify-center'}>
-                                <CSpinner color="success" />
+                                <CSpinner color='success' />
                             </div>
                     }
                     {
