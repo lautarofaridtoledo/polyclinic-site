@@ -1,0 +1,13 @@
+.formContainer {
+    background-color: var(--bg-cards-color);
+}
+
+.formContainer button {
+    background-color: #8CD494;
+    border-color: #8CD494;
+}
+
+.formContainer button:hover {
+    background-color: #7BB562;
+    border-color: #7BB562;
+}

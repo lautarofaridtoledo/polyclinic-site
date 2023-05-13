@@ -2,3 +2,7 @@
     opacity: 100 !important;
     cursor: pointer;
 }
+
+.cardSpeciality {
+    background-color: var(--bg-cards-color);
+}

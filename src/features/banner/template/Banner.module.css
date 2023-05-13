@@ -14,4 +14,50 @@
     .banner {
         height: 80vh;
     }
+
+    .content {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 150px;
+        margin-bottom: 50px;
+    }
+
+    .content h1 {
+        margin-bottom: 10px;
+    }
+    .content h3 {
+        margin-bottom: 30px;
+    }
+}
+
+.content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content button:hover {
+    background-color: #34495E !important;
+    color: var(--bg-cards-color);
+}
+
+.content button {
+    background-color: var(--bg-cards-color) !important;
+    color: #000;
+    border: none !important;
+    width: 150px;
+    padding: 10px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }

@@ -1,7 +1,8 @@
 
 .navbar {
     height: auto;
-    background-color: #CDF4EE;
+    /*background-color: #CDF4EE;*/
+    background-color: var(--main-bg-color);
     transition: all 0.3s ease;
 }
 
@@ -23,10 +24,14 @@
 
 .logo {
     padding: 10px;
+    cursor: pointer;
 }
 
-.navItem a {
+.navItem p {
     width: auto;
     max-width: 130px;
     text-decoration: none;
+}
+.navItem p:hover {
+    color: #618F4D !important;
 }
