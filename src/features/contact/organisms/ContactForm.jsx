@@ -1,23 +1,39 @@
 import React, {useEffect, useState} from "react";
-import {CButton, CCol, CForm, CFormInput, CFormLabel, CFormTextarea, CInputGroup} from "@coreui/react";
+import styles from '../templates/Contact.module.css';
+import {CCol, CForm, CFormInput, CFormLabel, CFormTextarea, CInputGroup} from "@coreui/react";
+import {validateEmail} from "../../../utils/validate";
 
-const ContactForm = ({onChange, onSubmit}) =>
+const ContactForm = ({onSubmit, initValues}) =>
 {
     const [validated, setValidated] = useState(false)
-    const handleSubmit = (event) => {
-        const form = event.currentTarget
+    const [formData, setFormData] = useState(initValues);
+    const [error, setError] = useState(true);
+
+    const handleChangeLeadData = (e) =>
+    {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const hasEmptyFields = () => formData.name.length === 0 || formData.email.length === 0
+
+    const handleSubmit = (event) =>
+    {
         event.preventDefault()
-        if (form.checkValidity() === false) {
-            event.preventDefault()
-            event.stopPropagation()
+        setValidated(true);
+        if (!hasEmptyFields() && validateEmail(formData.email))
+        {
+            onSubmit(formData);
         }
-        setValidated(true)
     }
 
     useEffect(() =>
     {
-        onSubmit(validated)
-    }, [validated])
+        setError(hasEmptyFields())
+    }, [formData])
+
 
     return (
         <CForm
@@ -37,7 +53,7 @@ const ContactForm = ({onChange, onSubmit}) =>
                         placeholder="Tu nombre..."
                         aria-describedby="validationInputName"
                         feedbackInvalid="Por favor, ingresa un nombre válido"
-                        onChange={(e) => onChange(e)}
+                        onChange={(e) => handleChangeLeadData(e)}
                         required
                     />
                 </CInputGroup>
@@ -53,7 +69,7 @@ const ContactForm = ({onChange, onSubmit}) =>
                     placeholder={'Tu email...'}
                     required
                     feedbackInvalid="Debes ingresar una cuenta de correo electrónico válida"
-                    onChange={(e) => onChange(e)}
+                    onChange={(e) => handleChangeLeadData(e)}
                 />
             </CCol>
             <CCol xs={12} lg={12} md={12}>
@@ -63,12 +79,18 @@ const ContactForm = ({onChange, onSubmit}) =>
                     id="inputMessage"
                     placeholder="Escribe tu mensaje aquí..."
                     style={{resize: "none"}}
-                    onChange={(e) => onChange(e)}
+                    onChange={(e) => handleChangeLeadData(e)}
                 />
             </CCol>
 
             <CCol xs={12}>
-                <CButton className={'mt-2'} type="submit">Enviar</CButton>
+                <button
+                    className={!error ? `btn ${styles.btnSend}` : `btn ${styles.btnForbidden}`}
+                    type="button"
+                    onClick={handleSubmit}
+                >
+                    Enviar
+                </button>
             </CCol>
         </CForm>
     )
