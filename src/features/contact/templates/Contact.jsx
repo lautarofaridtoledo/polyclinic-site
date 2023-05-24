@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ContactForm from '../organisms/ContactForm';
 import styles from './Contact.module.css'
 import SectionTitle from '../../shared/atoms/SectionTitle';
@@ -31,20 +31,26 @@ const Contact = () =>
         {
             setLoading(true);
             fetch('https://hook.us1.make.com/6kh7d9rhg54hnwkvzcwbc94z1d4a59hk', options)
-                .then(response => response.json())
-                .then(json => {
-                    setLoading(false)
-                    setTimeout(() =>
-                        setSubmitted(true)
-                    , 2000)
+                .then(response => {
+                    setLoading(false);
+                    setSubmitted(true);
                 })
                 .catch(err => {
-                    setLoading(false)
+                    setLoading(false);
                 })
-                .finally(() => setSubmitted(false))
         }
-
     };
+
+    useEffect(() =>
+    {
+        if(submitted)
+        {
+            setTimeout(() =>
+            {
+                setSubmitted(prevState => !prevState);
+            }, 3000)
+        }
+    }, [submitted])
 
     const handleChangeLeadData = (e) =>
     {
