@@ -21,8 +21,6 @@ const Contact = () =>
 
     const handleSubmit = (validated) =>
     {
-        console.log('submit', validated)
-
         const options = {
             method: "POST",
             headers: {"Content-type": "application/json;charset=UTF-8"},
@@ -32,12 +30,9 @@ const Contact = () =>
         if(validated)
         {
             setLoading(true);
-
-            console.log('fetching')
             fetch('https://hook.us1.make.com/6kh7d9rhg54hnwkvzcwbc94z1d4a59hk', options)
                 .then(response => response.json())
                 .then(json => {
-                    console.log('fetched',json)
                     setLoading(false)
                     setTimeout(() =>
                         setSubmitted(true)
@@ -45,7 +40,6 @@ const Contact = () =>
                 })
                 .catch(err => {
                     setLoading(false)
-                    console.log(err)
                 })
                 .finally(() => setSubmitted(false))
         }
