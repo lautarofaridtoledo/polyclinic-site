@@ -1,35 +1,58 @@
-import React from "react";
-import {CButton, CCol, CForm, CFormInput, CFormTextarea} from "@coreui/react";
+import React, {useEffect, useState} from "react";
+import {CButton, CCol, CForm, CFormInput, CFormLabel, CFormTextarea, CInputGroup} from "@coreui/react";
 
 const ContactForm = ({onChange, onSubmit}) =>
-    (
+{
+    const [validated, setValidated] = useState(false)
+    const handleSubmit = (event) => {
+        const form = event.currentTarget
+        event.preventDefault()
+        if (form.checkValidity() === false) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+        setValidated(true)
+    }
+
+    useEffect(() =>
+    {
+        onSubmit(validated)
+    }, [validated])
+
+    return (
         <CForm
-            className="row g-3 need-validation"
+            className="row g-3 needs-validation"
             noValidate
-            onSubmit={onSubmit}
+            validated={validated}
+            onSubmit={handleSubmit}
         >
             <CCol xs={12} lg={6} md={6}>
-                <CFormInput
-                    type="text"
-                    className="form-control"
-                    id="inputName"
-                    name='name'
-                    label="Nombre"
-                    placeholder={'Tu nombre...'}
-                    feedbackInvalid={'Por favor, ingresa un nombre válido'}
-                    onChange={(e) => onChange(e)}
-                />
+                <CFormLabel htmlFor="inputName">Nombre <span className={'text-danger'}>*</span></CFormLabel>
+                <CInputGroup className="has-validation">
+                    <CFormInput
+                        type="text"
+                        className="form-control"
+                        id="inputName"
+                        name='name'
+                        placeholder="Tu nombre..."
+                        aria-describedby="validationInputName"
+                        feedbackInvalid="Por favor, ingresa un nombre válido"
+                        onChange={(e) => onChange(e)}
+                        required
+                    />
+                </CInputGroup>
+
             </CCol>
             <CCol xs={12} lg={6} md={6}>
+                <CFormLabel htmlFor="inputEmail">Email <span className={'text-danger'}>*</span></CFormLabel>
                 <CFormInput
                     type="email"
-                    id="validationCustom01"
+                    id="inputEmail"
                     className="form-control"
-                    label="Email"
                     name='email'
                     placeholder={'Tu email...'}
                     required
-                    feedbackInvalid={'Debes ingresar una cuenta de correo electrónico válida'}
+                    feedbackInvalid="Debes ingresar una cuenta de correo electrónico válida"
                     onChange={(e) => onChange(e)}
                 />
             </CCol>
@@ -49,5 +72,7 @@ const ContactForm = ({onChange, onSubmit}) =>
             </CCol>
         </CForm>
     )
+}
+
 
 export default ContactForm;

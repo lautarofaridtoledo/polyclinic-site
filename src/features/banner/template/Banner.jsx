@@ -5,7 +5,7 @@ import smoothScroll from '../../../utils/smoothScroll';
 
 const Banner = () =>
     (
-        <main id='banner'>
+        <main id='banner' className={'relative'}>
             <div className={styles.content}>
                 <h1 className={'text-4xl md:text-6xl xl:text-7xl'}>Policlínica</h1>
                 <h3>Expertos en salud mental</h3>

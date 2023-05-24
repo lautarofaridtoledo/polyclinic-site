@@ -5,6 +5,7 @@ import SectionTitle from '../../shared/atoms/SectionTitle';
 import {useState} from 'react';
 import {CSpinner} from '@coreui/react';
 import SendSuccessfully from '../atoms/SendSuccessfully';
+import {validate} from "@babel/core/lib/config/validation/options";
 
 const initialValues = {
     name: '',
@@ -18,23 +19,31 @@ const Contact = () =>
     const [leadData, setLeadData] = useState(initialValues);
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (formData) =>
+    const handleSubmit = (validated) =>
     {
-        setLoading(true);
-        const form = formData.currentTarget;
-        if ( !form.checkValidity() )
-        {
-            formData.preventDefault();
-            formData.stopPropagation();
+        const options = {
+            method: "POST",
+            headers: {"Content-type": "application/json;charset=UTF-8"},
+            body: JSON.stringify(leadData)
         }
-        setTimeout(() =>
-            setLoading(false),
-            setSubmitted(true)
-        , 1000)
 
-        setTimeout(() =>
-            setSubmitted(false)
-            , 3000)
+        if(validated)
+        {
+            setLoading(true);
+            fetch('https://hook.us1.make.com/6kh7d9rhg54hnwkvzcwbc94z1d4a59hk', options)
+                .then(response => response.json())
+                .then(json => {
+                    setLoading(false)
+                    setTimeout(() =>
+                        setSubmitted(true)
+                    , 2000)
+                })
+                .catch(err => {
+                    setLoading(false)
+                })
+                .finally(() => setSubmitted(false))
+        }
+
     };
 
     const handleChangeLeadData = (e) =>
@@ -62,6 +71,7 @@ const Contact = () =>
                         <>
                             <div className={'pb-3 text-center'}>
                                 <p>Completa con tu información y nos pondremos en contacto contigo.</p>
+                                <p> Los valores con <span className={'text-danger'}>*</span> son requeridos.</p>
                             </div>
                             <ContactForm
                                 onChange={handleChangeLeadData}
