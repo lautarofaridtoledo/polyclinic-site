@@ -1,0 +1,24 @@
+.btnWpp {
+    transition: all .45s ease-in-out;
+    position: fixed;
+    bottom: 60px;
+    right: 0;
+    display: inline-flex;
+
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1em 3em 0;
+    border-radius: 50%;
+}
+
+.btnWpp button {
+    display: flex;
+    border-radius: 50% !important;
+    padding: 0!important;
+    width: 40px;
+    height: 40px;
+}
+
+
+

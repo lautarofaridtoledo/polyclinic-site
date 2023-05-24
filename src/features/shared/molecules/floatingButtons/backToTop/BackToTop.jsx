@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {CButton} from "@coreui/react";
-import arrow from '../../../../assets/images/global/top-arrow.webp';
+import arrow from '../../../../../assets/images/global/top-arrow.webp';
 import styles from './BackToTop.module.css';
 
 const BackToTop = () =>
