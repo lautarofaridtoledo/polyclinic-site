@@ -24,7 +24,7 @@ const WhatsAppButton = () =>
     return(
         <div className={`flex absolute right-5 ${ styles.btnWpp }`}>
             <CButton color='light' onClick={redirectToWhatsApp}>
-                <img src={wppIcon} alt={'Contactanos por WhatsApp'} className={'w-[40px] z-100'} title={"Contactar por WhatsApp"} />
+                <img src={wppIcon} alt={'Contactanos por WhatsApp'} className={'w-[40px]'} title={"Contactar por WhatsApp"} />
             </CButton>
         </div>
     )

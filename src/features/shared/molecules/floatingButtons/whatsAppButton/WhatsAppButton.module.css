@@ -4,6 +4,7 @@
     bottom: 60px;
     right: 0;
     display: inline-flex;
+    z-index: 999;
 
     cursor: pointer;
     align-items: center;
