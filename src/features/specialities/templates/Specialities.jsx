@@ -4,6 +4,7 @@ import banner from '../../../assets/images/global/specialities-banner.webp';
 import CustomModal from '../../shared/molecules/customModal/CustomModal';
 import specialities from '../../../json/specialities.json'
 import SectionTitle from '../../shared/atoms/SectionTitle';
+import RedirectToWhatsApp from "../../../utils/redirectToWhatsApp";
 
 const Specialities = () =>
 {
@@ -30,7 +31,7 @@ const Specialities = () =>
                 title={modalSpeciality.speciality}
                 isOpen={modalSpeciality.isOpen}
                 onClose={toggleModal}
-                onSave={()=>{}}
+                onSave={()=>RedirectToWhatsApp(modalSpeciality.speciality)}
                 imageUrl={modalSpeciality.url}
             >
                 <div>

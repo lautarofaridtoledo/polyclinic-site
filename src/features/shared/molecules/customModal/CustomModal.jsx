@@ -15,10 +15,10 @@ const CustomModal = (props) =>
             <CModalHeader>
                 <CModalTitle>
                     <p className='flex gap-3 items-center mb-0'>
-                        <span className={`flex w-[40px] ${styles.imgModal}`}>
-                            <ImageSpeciality url={props.imageUrl} name={props.title}/>
+                        <span className='w-fit'>
+                            <ImageSpeciality url={props.imageUrl} name={props.title} modal={true}/>
                         </span>
-                        {props?.title}
+                        {props.title}
                     </p>
                 </CModalTitle>
             </CModalHeader>
@@ -28,7 +28,7 @@ const CustomModal = (props) =>
             <CModalFooter>
                 <CButton
                     color='primary'
-                    // onClick={props.onSave}
+                    onClick={props.onSave}
                 >
                     Agendar cita
                 </CButton>

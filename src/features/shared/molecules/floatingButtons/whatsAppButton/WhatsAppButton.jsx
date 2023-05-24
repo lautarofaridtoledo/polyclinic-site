@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {CButton} from "@coreui/react";
 import wppIcon from '../../../../../assets/images/global/wpp-icon.svg';
 import styles from './WhatsAppButton.module.css';
+import redirectToWhatsApp from "../../../../../utils/redirectToWhatsApp";
 
 const WhatsAppButton = () =>
 {
@@ -15,15 +16,9 @@ const WhatsAppButton = () =>
         )
     }, [])
 
-    const redirectToWhatsApp = () =>
-    {
-        const phone = '5492234212380'
-        window.location.href = "https://wa.me/" + phone + "?text= ";
-    }
-
     return(
         <div className={`flex absolute right-5 ${ styles.btnWpp }`}>
-            <CButton color='light' onClick={redirectToWhatsApp}>
+            <CButton color='light' onClick={() => redirectToWhatsApp()}>
                 <img src={wppIcon} alt={'Contactanos por WhatsApp'} className={'w-[40px]'} title={"Contactar por WhatsApp"} />
             </CButton>
         </div>

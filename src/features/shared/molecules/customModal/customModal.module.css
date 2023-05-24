@@ -7,5 +7,5 @@
 }
 
 .imgModal {
-    @apply w-3/4;
+    @apply w-auto;
 }
