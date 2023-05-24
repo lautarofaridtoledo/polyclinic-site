@@ -2,12 +2,25 @@
     background-color: var(--bg-cards-color);
 }
 
-.formContainer button {
-    background-color: #8CD494;
-    border-color: #8CD494;
+.btnForbidden {
+    background-color: #a4e5aa !important;
+    border-color: #a4e5aa;
+    pointer-events: none;
 }
 
-.formContainer button:hover {
-    background-color: #7BB562;
-    border-color: #7BB562;
+.btn {
+    padding: 0.75rem 0.375rem;
+    width: 90px;
+    border-radius: 0.375rem;
+}
+
+.btnSend {
+
+    background-color: #62a24d !important;
+    border-color: #62a24d;
+}
+
+.btnSend:hover {
+    background-color: #8CD494 !important;
+    border-color: #8CD494;
 }

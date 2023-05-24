@@ -16,10 +16,9 @@ const initialValues = {
 const Contact = () =>
 {
     const [loading, setLoading] = useState(false);
-    const [leadData, setLeadData] = useState(initialValues);
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (validated) =>
+    const handleSubmit = (leadData) =>
     {
         const options = {
             method: "POST",
@@ -27,18 +26,15 @@ const Contact = () =>
             body: JSON.stringify(leadData)
         }
 
-        if(validated)
-        {
-            setLoading(true);
-            fetch('https://hook.us1.make.com/6kh7d9rhg54hnwkvzcwbc94z1d4a59hk', options)
-                .then(response => {
-                    setLoading(false);
-                    setSubmitted(true);
-                })
-                .catch(err => {
-                    setLoading(false);
-                })
-        }
+        setLoading(true);
+        fetch('https://hook.us1.make.com/6kh7d9rhg54hnwkvzcwbc94z1d4a59hk', options)
+        .then(response => {
+            setLoading(false);
+            setSubmitted(true);
+        })
+        .catch(err => {
+            setLoading(false);
+        })
     };
 
     useEffect(() =>
@@ -52,13 +48,7 @@ const Contact = () =>
         }
     }, [submitted])
 
-    const handleChangeLeadData = (e) =>
-    {
-        setLeadData({
-            ...leadData,
-            [e.target.name]: e.target.value
-        });
-    };
+
 
 
     return(
@@ -80,7 +70,7 @@ const Contact = () =>
                                 <p> Los valores con <span className={'text-danger'}>*</span> son requeridos.</p>
                             </div>
                             <ContactForm
-                                onChange={handleChangeLeadData}
+                                initValues={initialValues}
                                 onSubmit={handleSubmit}
                             />
                         </>
